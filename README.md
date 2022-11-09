@@ -99,7 +99,7 @@ For example, to run [Change_Interval example](https://github.com/khoih-prog/Dx_P
 
 
 <p align="center">
-    <img src="https://github.com/khoih-prog/Dx_PWM/blob/main/pics/Change_Interval.png">
+    <img src="https://github.com/khoih-prog/Dx_PWM/raw/main/pics/Change_Interval.png">
 </p>
 
 
@@ -107,7 +107,7 @@ After drag-and-drop the `Change_Interval.ino.hex` into `CURIOSITY` virtual drive
 
 
 <p align="center">
-    <img src="https://github.com/khoih-prog/Dx_PWM/blob/main/pics/CURIOSITY_drive.png">
+    <img src="https://github.com/khoih-prog/Dx_PWM/raw/main/pics/CURIOSITY_drive.png">
 </p>
 
 
@@ -176,14 +176,14 @@ Functions using normal software-based PWMs, relying on loop() and calling millis
 - **AVRDA-based boards (AVR128DA, AVR64DA, AVR32DA, etc.) using DxCore**
 
 <p align="center">
-    <img src="https://github.com/khoih-prog/Dx_PWM/blob/main/pics/Curiosity_AVR128DA48.png">
+    <img src="https://github.com/khoih-prog/Dx_PWM/raw/main/pics/Curiosity_AVR128DA48.png">
 </p>
 
 
 - **AVRDB-based boards (AVR128DB, AVR64DB, AVR32DB, etc.) using DxCore**
 
 <p align="center">
-    <img src="https://github.com/khoih-prog/Dx_PWM/blob/main/pics/Curiosity_AVR128DB48.png">
+    <img src="https://github.com/khoih-prog/Dx_PWM/raw/main/pics/Curiosity_AVR128DB48.png">
 </p>
 
 
