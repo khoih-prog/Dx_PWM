@@ -1,0 +1,52 @@
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+
+Dx_PWM	KEYWORD1
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+
+###################################
+# Class Dx_PWM
+###################################
+
+setPWM_Int	KEYWORD2
+setPWM	KEYWORD2
+setPWM_Period	KEYWORD2
+setPWM_manual	KEYWORD2
+getActualDutyCycle	KEYWORD2
+getActualFreq	KEYWORD2
+getPWMPeriod	KEYWORD2
+get_freq_CPU	KEYWORD2
+getPin	KEYWORD2
+isPWMEnabled	KEYWORD2
+
+
+#######################################
+# Constants (LITERAL1)
+#######################################
+
+DX_PWM_VERSION  LITERAL1
+DX_PWM_VERSION_MAJOR  LITERAL1
+DX_PWM_VERSION_MINOR  LITERAL1
+DX_PWM_VERSION_PATCH  LITERAL1
+DX_PWM_VERSION_INT  LITERAL1
+
+MAX_COUNT_8BIT	LITERAL1
+MAX_COUNT_12BIT	LITERAL1
+MAX_COUNT_16BIT	LITERAL1
+
+MAX_8BIT	LITERAL1
+MAX_12BIT	LITERAL1
+MAX_16BIT	LITERAL1
+
+TIMERA_RESOLUTION	LITERAL1
+TIMERB_RESOLUTION	LITERAL1
+
+TCB_CLKSEL_CLKDIV1	LITERAL1
+TCB_CLKSEL_CLKDIV2	LITERAL1
+TCB_CLKSEL_CLKDIV64	LITERAL1
+
+_PWM_LOGLEVEL_  LITERAL1
