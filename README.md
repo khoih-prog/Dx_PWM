@@ -99,7 +99,7 @@ For example, to run [Change_Interval example](https://github.com/khoih-prog/Dx_P
 
 
 <p align="center">
-    <img src="https://github.com/khoih-prog/Dx_PWM/raw/main/pics/Change_Interval.png">
+    <img src="https://github.com/khoih-prog/Dx_PWM/blob/main/pics/Change_Interval.png">
 </p>
 
 
@@ -107,7 +107,7 @@ After drag-and-drop the `Change_Interval.ino.hex` into `CURIOSITY` virtual drive
 
 
 <p align="center">
-    <img src="https://github.com/khoih-prog/Dx_PWM/raw/main/pics/CURIOSITY_drive.png">
+    <img src="https://github.com/khoih-prog/Dx_PWM/blob/main/pics/CURIOSITY_drive.png">
 </p>
 
 
@@ -122,20 +122,20 @@ This hardware-based PWM library, a wrapper and enhancement around `DxCore analog
 
 This library is using the **same or similar functions** as other FastPWM libraries, as follows, to enable you to **port your PWM code easily between platforms**
 
-- [**RP2040_PWM**](https://github.com/khoih-prog/RP2040_PWM)
-- [**AVR_PWM**](https://github.com/khoih-prog/AVR_PWM)
-- [**megaAVR_PWM**](https://github.com/khoih-prog/megaAVR_PWM)
-- [**ESP32_FastPWM**](https://github.com/khoih-prog/ESP32_FastPWM)
-- [**SAMD_PWM**](https://github.com/khoih-prog/SAMD_PWM)
-- [**SAMDUE_PWM**](https://github.com/khoih-prog/SAMDUE_PWM)
-- [**nRF52_PWM**](https://github.com/khoih-prog/nRF52_PWM)
-- [**Teensy_PWM**](https://github.com/khoih-prog/Teensy_PWM)
-- [**ATtiny_PWM**](https://github.com/khoih-prog/ATtiny_PWM)
-- [**Dx_PWM**](https://github.com/khoih-prog/Dx_PWM)
-- [**Portenta_H7_PWM**](https://github.com/khoih-prog/Portenta_H7_PWM)
-- [**MBED_RP2040_PWM**](https://github.com/khoih-prog/MBED_RP2040_PWM)
-- [**nRF52_MBED_PWM**](https://github.com/khoih-prog/nRF52_MBED_PWM)
-- [**STM32_PWM**](https://github.com/khoih-prog/STM32_PWM)
+ 1. [**RP2040_PWM**](https://github.com/khoih-prog/RP2040_PWM)
+ 2. [**AVR_PWM**](https://github.com/khoih-prog/AVR_PWM)
+ 3. [**megaAVR_PWM**](https://github.com/khoih-prog/megaAVR_PWM)
+ 4. [**ESP32_FastPWM**](https://github.com/khoih-prog/ESP32_FastPWM)
+ 5. [**SAMD_PWM**](https://github.com/khoih-prog/SAMD_PWM)
+ 6. [**SAMDUE_PWM**](https://github.com/khoih-prog/SAMDUE_PWM)
+ 7. [**nRF52_PWM**](https://github.com/khoih-prog/nRF52_PWM)
+ 8. [**Teensy_PWM**](https://github.com/khoih-prog/Teensy_PWM)
+ 9. [**ATtiny_PWM**](https://github.com/khoih-prog/ATtiny_PWM)
+10. [**Dx_PWM**](https://github.com/khoih-prog/Dx_PWM)
+11. [**Portenta_H7_PWM**](https://github.com/khoih-prog/Portenta_H7_PWM)
+12. [**MBED_RP2040_PWM**](https://github.com/khoih-prog/MBED_RP2040_PWM)
+13. [**nRF52_MBED_PWM**](https://github.com/khoih-prog/nRF52_MBED_PWM)
+14. [**STM32_PWM**](https://github.com/khoih-prog/STM32_PWM)
 
 ---
 
@@ -176,14 +176,14 @@ Functions using normal software-based PWMs, relying on loop() and calling millis
 - **AVRDA-based boards (AVR128DA, AVR64DA, AVR32DA, etc.) using DxCore**
 
 <p align="center">
-    <img src="https://github.com/khoih-prog/Dx_PWM/raw/main/pics/Curiosity_AVR128DA48.png">
+    <img src="https://github.com/khoih-prog/Dx_PWM/blob/main/pics/Curiosity_AVR128DA48.png">
 </p>
 
 
 - **AVRDB-based boards (AVR128DB, AVR64DB, AVR32DB, etc.) using DxCore**
 
 <p align="center">
-    <img src="https://github.com/khoih-prog/Dx_PWM/raw/main/pics/Curiosity_AVR128DB48.png">
+    <img src="https://github.com/khoih-prog/Dx_PWM/blob/main/pics/Curiosity_AVR128DB48.png">
 </p>
 
 
