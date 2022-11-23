@@ -8,7 +8,8 @@
 
 <a href="https://www.buymeacoffee.com/khoihprog6" title="Donate to my libraries using BuyMeACoffee"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Donate to my libraries using BuyMeACoffee" style="height: 50px !important;width: 181px !important;" ></a>
 <a href="https://www.buymeacoffee.com/khoihprog6" title="Donate to my libraries using BuyMeACoffee"><img src="https://img.shields.io/badge/buy%20me%20a%20coffee-donate-orange.svg?logo=buy-me-a-coffee&logoColor=FFDD00" style="height: 20px !important;width: 200px !important;" ></a>
-<a href="https://profile-counter.glitch.me/khoih-prog-dx-pwm/count.svg"  title="Visitor count"><img src="https://profile-counter.glitch.me/khoih-prog-dx-pwm/count.svg" style="height: 30px;width: 200px;"></a>
+<a href="https://profile-counter.glitch.me/khoih-prog/count.svg" title="Total khoih-prog Visitor count"><img src="https://profile-counter.glitch.me/khoih-prog/count.svg" style="height: 30px;width: 200px;"></a>
+<a href="https://profile-counter.glitch.me/khoih-prog-dx-pwm/count.svg"  title="Dx_PWM Visitor count"><img src="https://profile-counter.glitch.me/khoih-prog-dx-pwm/count.svg" style="height: 30px;width: 200px;"></a>
 
 ---
 ---
@@ -99,7 +100,7 @@ For example, to run [Change_Interval example](https://github.com/khoih-prog/Dx_P
 
 
 <p align="center">
-    <img src="https://github.com/khoih-prog/Dx_PWM/blob/main/pics/Change_Interval.png">
+    <img src="https://github.com/khoih-prog/Dx_PWM/raw/main/pics/Change_Interval.png">
 </p>
 
 
@@ -107,7 +108,7 @@ After drag-and-drop the `Change_Interval.ino.hex` into `CURIOSITY` virtual drive
 
 
 <p align="center">
-    <img src="https://github.com/khoih-prog/Dx_PWM/blob/main/pics/CURIOSITY_drive.png">
+    <img src="https://github.com/khoih-prog/Dx_PWM/raw/main/pics/CURIOSITY_drive.png">
 </p>
 
 
@@ -176,14 +177,14 @@ Functions using normal software-based PWMs, relying on loop() and calling millis
 - **AVRDA-based boards (AVR128DA, AVR64DA, AVR32DA, etc.) using DxCore**
 
 <p align="center">
-    <img src="https://github.com/khoih-prog/Dx_PWM/blob/main/pics/Curiosity_AVR128DA48.png">
+    <img src="https://github.com/khoih-prog/Dx_PWM/raw/main/pics/Curiosity_AVR128DA48.png">
 </p>
 
 
 - **AVRDB-based boards (AVR128DB, AVR64DB, AVR32DB, etc.) using DxCore**
 
 <p align="center">
-    <img src="https://github.com/khoih-prog/Dx_PWM/blob/main/pics/Curiosity_AVR128DB48.png">
+    <img src="https://github.com/khoih-prog/Dx_PWM/raw/main/pics/Curiosity_AVR128DB48.png">
 </p>
 
 
@@ -376,7 +377,7 @@ https://github.com/khoih-prog/Dx_PWM/blob/84687f4fae4d5cae1e51d7d502575d523e32aa
 The following is the sample terminal output when running example [PWM_DynamicDutyCycle](examples/PWM_DynamicDutyCycle) on **AVR128DB** using `DxCore`, to demonstrate the ability to provide high PWM frequencies and ability to change DutyCycle `on-the-fly`.
 
 
-```
+```cpp
 Starting PWM_DynamicDutyCycle on AVR128DB
 Dx_PWM v1.0.0
 [PWM] Dx_PWM: freq = 5000.00
@@ -435,7 +436,7 @@ Actual data: pin = 39, PWM DC = 78642.67, PWMPeriod = 75.00, PWM Freq (Hz) = 500
 The following is the sample terminal output when running example [**PWM_Multi**](examples/PWM_Multi) on **AVR128DB**, to demonstrate the ability to provide high PWM frequencies on multiple `PWM-capable` pins.
 
 
-```
+```cpp
 Starting PWM_Multi on AVR128DB
 Dx_PWM v1.0.0
 [PWM] Dx_PWM: freq = 2000.00
@@ -495,7 +496,7 @@ Actual data: pin = 39, PWM DC = 113976.09, PWMPeriod = 46.00, PWM Freq (Hz) = 80
 
 The following is the sample terminal output when running example [**PWM_DynamicFreq**](examples/PWM_DynamicFreq) on **AVR128DB**, to demonstrate the ability to change dynamically PWM frequencies.
 
-```
+```cpp
 Starting PWM_DynamicFreq on AVR128DB
 Dx_PWM v1.0.0
 [PWM] Dx_PWM: freq = 10000.00
@@ -547,7 +548,7 @@ Actual data: pin = 39, PWM DC = 182044.43, PWMPeriod = 18.00, PWM Freq (Hz) = 20
 
 The following is the sample terminal output when running example [**PWM_Waveform**](examples/PWM_Waveform) on **AVR128DB**, to demonstrate how to use the `setPWM_manual()` function in wafeform creation
 
-```
+```cpp
 Starting PWM_Waveform on AVR128DB
 Dx_PWM v1.0.0
 [PWM] Dx_PWM: freq = 2000.00
@@ -611,7 +612,7 @@ Actual data: pin = 39, PWM DutyCycle = 0.53, PWMPeriod = 187.00, PWM Freq (Hz) =
 The following is the sample terminal output when running example [**PWM_Waveform**](examples/PWM_Waveform) on **AVR128DA**, to demonstrate how to use the `setPWM_manual()` function in wafeform creation
 
 
-```
+```cpp
 Starting PWM_Waveform on AVR128DA
 Dx_PWM v1.0.0
 [PWM] Dx_PWM: freq = 2000.00
@@ -741,4 +742,4 @@ If you want to contribute to this project:
 
 ## Copyright
 
-Copyright 2022- Khoi Hoang
+Copyright (c) 2022- Khoi Hoang
