@@ -186,6 +186,8 @@ Functions using normal software-based PWMs, relying on loop() and calling millis
     <img src="https://github.com/khoih-prog/Dx_PWM/raw/main/pics/Curiosity_AVR128DB48.png">
 </p>
 
+- **AVRDD-based boards (AVR64DB, AVR32DB, AVR16DB, etc.) using DxCore v1.5.1+**
+
 
 ---
 ---
@@ -193,7 +195,7 @@ Functions using normal software-based PWMs, relying on loop() and calling millis
 ## Prerequisites
 
 1. [`Arduino IDE 1.8.19+` for Arduino](https://github.com/arduino/Arduino). [![GitHub release](https://img.shields.io/github/release/arduino/Arduino.svg)](https://github.com/arduino/Arduino/releases/latest)
-2. [`SpenceKonde DxCore core 1.4.10+`](https://github.com/SpenceKonde/DxCore) for Arduino AVRDx boards.  [![GitHub release](https://img.shields.io/github/release/SpenceKonde/DxCore.svg)](https://github.com/SpenceKonde/DxCore/releases/latest). Follow [**DxCore Installation**](https://github.com/SpenceKonde/DxCore/blob/main/Installation.md).
+2. [`SpenceKonde DxCore core 1.5.1+`](https://github.com/SpenceKonde/DxCore) for Arduino AVRDx boards.  [![GitHub release](https://img.shields.io/github/release/SpenceKonde/DxCore.svg)](https://github.com/SpenceKonde/DxCore/releases/latest). Follow [**DxCore Installation**](https://github.com/SpenceKonde/DxCore/blob/main/Installation.md).
  
  
 ---
@@ -363,7 +365,7 @@ PWM_Instance->setPWM_manual(PWM_Pins, new_level);
 ### Example [PWM_Multi](examples/PWM_Multi)
 
 
-https://github.com/khoih-prog/Dx_PWM/blob/84687f4fae4d5cae1e51d7d502575d523e32aae6/examples/PWM_Multi/PWM_Multi.ino#L11-L135
+https://github.com/khoih-prog/Dx_PWM/blob/3090d0e474c3ea2e7fff0d5aa9311e9f263904b7/examples/PWM_Multi/PWM_Multi.ino#L11-L140
 
 
 ---
@@ -378,7 +380,7 @@ The following is the sample terminal output when running example [PWM_DynamicDut
 
 ```cpp
 Starting PWM_DynamicDutyCycle on AVR128DB
-Dx_PWM v1.0.0
+Dx_PWM v1.1.0
 [PWM] Dx_PWM: freq = 5000.00
 [PWM] Dx_PWM: _dutycycle = 0
 =====================================================================================
@@ -437,7 +439,7 @@ The following is the sample terminal output when running example [**PWM_Multi**]
 
 ```cpp
 Starting PWM_Multi on AVR128DB
-Dx_PWM v1.0.0
+Dx_PWM v1.1.0
 [PWM] Dx_PWM: freq = 2000.00
 [PWM] Dx_PWM: _dutycycle = 13107
 [PWM] setPWM_Int: pin = 10 , _dutycycle = 13107 , old frequency = 2000.00
@@ -497,12 +499,12 @@ The following is the sample terminal output when running example [**PWM_DynamicF
 
 ```cpp
 Starting PWM_DynamicFreq on AVR128DB
-Dx_PWM v1.0.0
+Dx_PWM v1.1.0
 [PWM] Dx_PWM: freq = 10000.00
 [PWM] Dx_PWM: _dutycycle = 32767
 Stop here forever
 Starting PWM_DynamicFreq on AVR128DB
-Dx_PWM v1.0.0
+Dx_PWM v1.1.0
 [PWM] Dx_PWM: freq = 10000.00
 [PWM] Dx_PWM: _dutycycle = 32767
 =====================================================================================
@@ -549,7 +551,7 @@ The following is the sample terminal output when running example [**PWM_Waveform
 
 ```cpp
 Starting PWM_Waveform on AVR128DB
-Dx_PWM v1.0.0
+Dx_PWM v1.1.0
 [PWM] Dx_PWM: freq = 2000.00
 [PWM] Dx_PWM: _dutycycle = 0
 [PWM] setPWM: _dutycycle = 0
@@ -613,7 +615,7 @@ The following is the sample terminal output when running example [**PWM_Waveform
 
 ```cpp
 Starting PWM_Waveform on AVR128DA
-Dx_PWM v1.0.0
+Dx_PWM v1.1.0
 [PWM] Dx_PWM: freq = 2000.00
 [PWM] Dx_PWM: _dutycycle = 0
 [PWM] setPWM: _dutycycle = 0
@@ -709,7 +711,8 @@ Submit issues to: [Dx_PWM issues](https://github.com/khoih-prog/Dx_PWM/issues)
 ## DONE
 
  1. Basic hardware-based multi-channel PWMs for **AVRDx-based boards (AVR128Dx, AVR64Dx, AVR32Dx, etc.) using DxCore**
-
+ 2. Add support to AVRDD (AVR64DD, AVR32DDx, AVR16DD, etc.)
+ 3. Modify to use either breaking DxCore v1.5.1+ or v1.4.10-
 
 
 ---
