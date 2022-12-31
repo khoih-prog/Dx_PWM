@@ -9,11 +9,12 @@
 
   This is pure hardware-based PWM
 
-  Version: 1.0.0
+  Version: 1.1.0
 
   Version Modified By   Date      Comments
   ------- -----------  ---------- -----------
   1.0.0   K.Hoang      09/11/2022 Initial coding to support AVR Dx (AVR128Dx, AVR64Dx, AVR32Dx, etc.) using DxCore
+  1.1.0   K.Hoang      30/12/2022 Add support to AVR DD (AVR64DD, AVR32DDx, AVR16DD, etc.) using breaking DxCore v1.5.1+
 *****************************************************************************************************************************/
 
 #pragma once
@@ -57,13 +58,22 @@
 
     #elif ( defined(__AVR_AVR64DD32__) || defined(__AVR_AVR64DD28__) || defined(__AVR_AVR64DD20__) || defined(__AVR_AVR64DD14__) )
       #define BOARD_NAME      F("AVR64DD")
-      #error AVR64DD not supported yet by the DxCore
+      #if ( (DXCORE_MAJOR == 1) && (DXCORE_MINOR < 5) )
+        #error AVR64DD not supported yet
+      #endif
     #elif ( defined(__AVR_AVR32DD32__) || defined(__AVR_AVR32DD28__) || defined(__AVR_AVR32DD20__) || defined(__AVR_AVR32DD14__) )
       #define BOARD_NAME      F("AVR32DD")
-      #error AVR32DD not supported yet by the DxCore
+      
+      #if ( (DXCORE_MAJOR == 1) && (DXCORE_MINOR < 5) )
+        #error AVR32DD not supported yet
+      #endif
+
     #elif ( defined(__AVR_AVR16DD32__) || defined(__AVR_AVR16DD28__) || defined(__AVR_AVR16DD20__) || defined(__AVR_AVR16DD14__) )
       #define BOARD_NAME      F("AVR16DD")
-      #error AVR16DD not supported yet by the DxCore
+      
+      #if ( (DXCORE_MAJOR == 1) && (DXCORE_MINOR < 5) )
+        #error AVR16DD not supported yet
+      #endif
 
       ////////////////////////// __AVR_DU__ //////////////////////////
 
@@ -100,13 +110,13 @@
 ////////////////////////////////////////
 
 #ifndef DX_PWM_VERSION
-  #define DX_PWM_VERSION           F("Dx_PWM v1.0.0")
+  #define DX_PWM_VERSION           F("Dx_PWM v1.1.0")
 
   #define DX_PWM_VERSION_MAJOR     1
-  #define DX_PWM_VERSION_MINOR     0
+  #define DX_PWM_VERSION_MINOR     1
   #define DX_PWM_VERSION_PATCH     0
 
-  #define DX_PWM_VERSION_INT      1000000
+  #define DX_PWM_VERSION_INT      1001000
 #endif
 
 ////////////////////////////////////////
@@ -141,6 +151,11 @@
 
 ////////////////////////////////////////
 ////////////////////////////////////////
+
+// From DxCore v1.5.1, must use __PeripheralControl instead of PeripheralControl
+#if ( (DXCORE_MAJOR == 1) && (DXCORE_MINOR >= 5) )
+  #define PeripheralControl			__PeripheralControl
+#endif
 
 extern uint8_t PeripheralControl;
 
@@ -260,6 +275,8 @@ class Dx_PWM
 
     ///////////////////////////////////////////
 
+#if defined(TCA1)
+
     void setPeriod_TimerA1(uint32_t microseconds) __attribute__((always_inline))
     {
       // TCA Clock is F_CPU / 64, 375.0KHz for 24MHz
@@ -320,7 +337,7 @@ class Dx_PWM
 
       PWM_LOGDEBUG3("setPeriod_TimerA1: pwmPeriod =", pwmPeriod, ", _actualFrequency =", _actualFrequency);
     }
-
+#endif
     ///////////////////////////////////////////
 
     void setPeriod_TimerB(unsigned long microseconds) __attribute__((always_inline))
@@ -511,7 +528,7 @@ class Dx_PWM
 
         ///////////////////////////////////////////
 
-#ifdef TCA1
+#if defined(TCA1)
         /*  case TIMERA1:
         */
         tcaroute &= (0x18);

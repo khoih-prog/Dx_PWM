@@ -51,7 +51,11 @@
 // PF0-3: Not PWM
 // PF4-5: TCB
 
-#define pinToUse       PIN_PC3    //PIN_PF5
+#if defined(PIN_PF5)
+  #define pinToUse       PIN_PF5
+#else
+  #define pinToUse       PIN_PC0
+#endif
 
 //creates pwm instance
 Dx_PWM* PWM_Instance;

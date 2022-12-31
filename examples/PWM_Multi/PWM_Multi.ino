@@ -50,8 +50,13 @@
 // PF0-3: Not PWM
 // PF4-5: TCB
 
-// Be careful to select pins for different frequencies
-uint32_t PWM_Pins[] = { PIN_PB2, PIN_PC0, PIN_PF4, PIN_PF5 };
+#if defined(PIN_PF5)
+  // Be careful to select pins for different frequencies
+  uint32_t PWM_Pins[] = { PIN_PC0, PIN_PF4, PIN_PF5 };
+#else
+  // Be careful to select pins for different frequencies
+  uint32_t PWM_Pins[] = { PIN_PC0 };
+#endif  
 
 float frequency[]   = { 2000.0f, 3000.0f, 4000.0f, 8000.0f };
 float dutyCycle[]   = { 20.0f, 30.0f, 40.0f, 80.0f };

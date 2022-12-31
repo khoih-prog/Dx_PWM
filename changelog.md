@@ -18,6 +18,7 @@
 ## Table of Contents
 
 * [Changelog](#changelog)
+  * [Release v1.1.0](#release-v110)
   * [Initial Release v1.0.0](#initial-release-v100)
 
 ---
@@ -25,6 +26,11 @@
 
 ## Changelog
 
+
+### Release v1.1.0
+
+1. Add support to AVRDD (AVR64DD, AVR32DDx, AVR16DD, etc.)
+2. Modify to use either breaking DxCore v1.5.1+ or v1.4.10-
 
 ### Initial Release v1.0.0
 
