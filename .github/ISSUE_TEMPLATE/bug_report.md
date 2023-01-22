@@ -31,12 +31,14 @@ A clear and concise description of what you expected to happen.
 
 If applicable, add screenshots to help explain your problem.
 
+---
+
 ### Information
 
 Please ensure to specify the following:
 
 * Arduino IDE version (e.g. 1.8.19) or Platform.io version
-* `DxCore` Core Version (e.g. Arduino DxCore core v1.5.1)
+* `DxCore` Core Version (e.g. Arduino DxCore core v1.5.3)
 * Board (e.g. AVR128DA64, AVR128DB48, AVR64DB32, etc.)
 * Contextual information (e.g. what you were trying to achieve)
 * Simplest possible steps to reproduce
@@ -46,13 +48,16 @@ Please ensure to specify the following:
 
 Please be educated, civilized and constructive. Disrespective posts against [GitHub Code of Conduct](https://docs.github.com/en/site-policy/github-terms/github-event-code-of-conduct) will be ignored and deleted.
 
-### Example
+Please be educated, civilized and constructive as you've always been. Disrespective posts against [GitHub Code of Conduct](https://docs.github.com/en/site-policy/github-terms/github-event-code-of-conduct) will be ignored and deleted.
 
+---
+
+### Example
 ```
 Arduino IDE version: 1.8.19
-Arduino DxCore core v1.5.1
+Arduino DxCore core v1.5.3
 Board: Curiosity AVR128DB48
-Linux xy-Inspiron-3593 5.15.0-56-generic #62~20.04.1-Ubuntu SMP Tue Nov 22 21:24:20 UTC 2022 x86_64 x86_64 x86_64 GNU/Linux
+Linux xy-Inspiron-3593 5.15.0-58-generic #64~20.04.1-Ubuntu SMP Fri Jan 6 16:42:31 UTC 2023 x86_64 x86_64 x86_64 GNU/Linux
 
 Context:
 I encountered a crash while trying to use this library
