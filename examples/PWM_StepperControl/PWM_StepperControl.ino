@@ -66,15 +66,15 @@ void setup()
 {
   pinMode(DIR_PIN, OUTPUT);
   
-  Serial.begin(115200);
+  SerialDebug.begin(115200);
 
-  while (!Serial && millis() < 5000);
+  while (!SerialDebug && millis() < 5000);
 
   delay(100);
 
-  Serial.print(F("\nStarting PWM_StepperControl on "));
-  Serial.println(BOARD_NAME);
-  Serial.println(DX_PWM_VERSION);
+  SerialDebug.print(F("\nStarting PWM_StepperControl on "));
+  SerialDebug.println(BOARD_NAME);
+  SerialDebug.println(DX_PWM_VERSION);
   
   // Create PWM object and passed just a random frequency of 500
   // The duty cycle is how you turn the motor on and off
