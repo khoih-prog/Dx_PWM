@@ -9,12 +9,13 @@
 
   This is pure hardware-based PWM
 
-  Version: 1.1.0
+  Version: 1.1.1
 
   Version Modified By   Date      Comments
   ------- -----------  ---------- -----------
   1.0.0   K.Hoang      09/11/2022 Initial coding to support AVR Dx (AVR128Dx, AVR64Dx, AVR32Dx, etc.) using DxCore
   1.1.0   K.Hoang      30/12/2022 Add support to AVR DD (AVR64DD, AVR32DDx, AVR16DD, etc.) using breaking DxCore v1.5.1+
+  1.1.1   K Hoang      22/01/2023 Add `PWM_StepperControl` example
  *****************************************************************************************************************************/
 
 #pragma once

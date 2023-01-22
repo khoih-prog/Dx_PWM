@@ -18,6 +18,7 @@
 ## Table of Contents
 
 * [Changelog](#changelog)
+  * [Release v1.1.1](#release-v111)
   * [Release v1.1.0](#release-v110)
   * [Initial Release v1.0.0](#initial-release-v100)
 
@@ -26,6 +27,9 @@
 
 ## Changelog
 
+### Release v1.1.1
+
+1. Add example [PWM_StepperControl](https://github.com/khoih-prog/Dx_PWM/tree/main/examples/PWM_StepperControl) to demo how to control Stepper Motor using PWM. Check [Using PWM to step a stepper driver #16](https://github.com/khoih-prog/RP2040_PWM/issues/16)
 
 ### Release v1.1.0
 

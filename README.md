@@ -42,6 +42,7 @@
   * [ 5. PWM_Multi](examples/PWM_Multi)
   * [ 6. PWM_MultiChannel](examples/PWM_MultiChannel)
   * [ 7. PWM_Waveform](examples/PWM_Waveform)
+  * [ 8. PWM_StepperControl](examples/PWM_StepperControl) **New**
 * [Example PWM_Multi](#example-PWM_Multi)
 * [Debug Terminal Output Samples](#debug-terminal-output-samples)
   * [1. PWM_DynamicDutyCycle on AVR128DB](#1-PWM_DynamicDutyCycle-on-AVR128DB)
@@ -186,7 +187,7 @@ Functions using normal software-based PWMs, relying on loop() and calling millis
     <img src="https://github.com/khoih-prog/Dx_PWM/raw/main/pics/Curiosity_AVR128DB48.png">
 </p>
 
-- **AVRDD-based boards (AVR64DB, AVR32DB, AVR16DB, etc.) using DxCore v1.5.1+**
+- **AVRDD-based boards (AVR64DD, AVR32DD, AVR16DD, etc.) using DxCore v1.5.1+**
 
 
 ---
@@ -195,7 +196,7 @@ Functions using normal software-based PWMs, relying on loop() and calling millis
 ## Prerequisites
 
 1. [`Arduino IDE 1.8.19+` for Arduino](https://github.com/arduino/Arduino). [![GitHub release](https://img.shields.io/github/release/arduino/Arduino.svg)](https://github.com/arduino/Arduino/releases/latest)
-2. [`SpenceKonde DxCore core 1.5.1+`](https://github.com/SpenceKonde/DxCore) for Arduino AVRDx boards.  [![GitHub release](https://img.shields.io/github/release/SpenceKonde/DxCore.svg)](https://github.com/SpenceKonde/DxCore/releases/latest). Follow [**DxCore Installation**](https://github.com/SpenceKonde/DxCore/blob/main/Installation.md).
+2. [`SpenceKonde DxCore core 1.5.3+`](https://github.com/SpenceKonde/DxCore) for Arduino AVRDx boards.  [![GitHub release](https://img.shields.io/github/release/SpenceKonde/DxCore.svg)](https://github.com/SpenceKonde/DxCore/releases/latest). Follow [**DxCore Installation**](https://github.com/SpenceKonde/DxCore/blob/main/Installation.md).
  
  
 ---
@@ -357,6 +358,7 @@ PWM_Instance->setPWM_manual(PWM_Pins, new_level);
  5. [PWM_Multi](examples/PWM_Multi)
  6. [PWM_MultiChannel](examples/PWM_MultiChannel)
  7. [PWM_Waveform](examples/PWM_Waveform)
+ 8. [PWM_StepperControl](examples/PWM_StepperControl) **New**
 
  
 ---
@@ -380,7 +382,7 @@ The following is the sample terminal output when running example [PWM_DynamicDut
 
 ```cpp
 Starting PWM_DynamicDutyCycle on AVR128DB
-Dx_PWM v1.1.0
+Dx_PWM v1.1.1
 [PWM] Dx_PWM: freq = 5000.00
 [PWM] Dx_PWM: _dutycycle = 0
 =====================================================================================
@@ -439,7 +441,7 @@ The following is the sample terminal output when running example [**PWM_Multi**]
 
 ```cpp
 Starting PWM_Multi on AVR128DB
-Dx_PWM v1.1.0
+Dx_PWM v1.1.1
 [PWM] Dx_PWM: freq = 2000.00
 [PWM] Dx_PWM: _dutycycle = 13107
 [PWM] setPWM_Int: pin = 10 , _dutycycle = 13107 , old frequency = 2000.00
@@ -499,12 +501,12 @@ The following is the sample terminal output when running example [**PWM_DynamicF
 
 ```cpp
 Starting PWM_DynamicFreq on AVR128DB
-Dx_PWM v1.1.0
+Dx_PWM v1.1.1
 [PWM] Dx_PWM: freq = 10000.00
 [PWM] Dx_PWM: _dutycycle = 32767
 Stop here forever
 Starting PWM_DynamicFreq on AVR128DB
-Dx_PWM v1.1.0
+Dx_PWM v1.1.1
 [PWM] Dx_PWM: freq = 10000.00
 [PWM] Dx_PWM: _dutycycle = 32767
 =====================================================================================
@@ -551,7 +553,7 @@ The following is the sample terminal output when running example [**PWM_Waveform
 
 ```cpp
 Starting PWM_Waveform on AVR128DB
-Dx_PWM v1.1.0
+Dx_PWM v1.1.1
 [PWM] Dx_PWM: freq = 2000.00
 [PWM] Dx_PWM: _dutycycle = 0
 [PWM] setPWM: _dutycycle = 0
@@ -615,7 +617,7 @@ The following is the sample terminal output when running example [**PWM_Waveform
 
 ```cpp
 Starting PWM_Waveform on AVR128DA
-Dx_PWM v1.1.0
+Dx_PWM v1.1.1
 [PWM] Dx_PWM: freq = 2000.00
 [PWM] Dx_PWM: _dutycycle = 0
 [PWM] setPWM: _dutycycle = 0
@@ -711,9 +713,9 @@ Submit issues to: [Dx_PWM issues](https://github.com/khoih-prog/Dx_PWM/issues)
 ## DONE
 
  1. Basic hardware-based multi-channel PWMs for **AVRDx-based boards (AVR128Dx, AVR64Dx, AVR32Dx, etc.) using DxCore**
- 2. Add support to AVRDD (AVR64DD, AVR32DDx, AVR16DD, etc.)
- 3. Modify to use either breaking DxCore v1.5.1+ or v1.4.10-
-
+ 2. Add support to `AVRDD` (AVR64DD, AVR32DDx, AVR16DD, etc.)
+ 3. Modify to use either breaking DxCore `v1.5.1+` or `v1.4.10-`
+ 2. Add example [PWM_StepperControl](https://github.com/khoih-prog/Dx_PWM/tree/main/examples/PWM_StepperControl) to demo how to control Stepper Motor using PWM
 
 ---
 ---
@@ -722,6 +724,14 @@ Submit issues to: [Dx_PWM issues](https://github.com/khoih-prog/Dx_PWM/issues)
 
 Many thanks for everyone for bug reporting, new feature suggesting, testing and contributing to the development of this library.
 
+1. Thanks to [Paul van Dinther](https://github.com/dinther) for proposing new way to use PWM to drive Stepper-Motor in [Using PWM to step a stepper driver #16](https://github.com/khoih-prog/RP2040_PWM/issues/16), leading to v2.0.3
+
+
+<table>
+  <tr>
+    <td align="center"><a href="https://github.com/dinther"><img src="https://github.com/dinther.png" width="100px;" alt="dinther"/><br /><sub><b>Paul van Dinther</b></sub></a><br /></td>
+  </tr>
+</table>
   
 ---
 
